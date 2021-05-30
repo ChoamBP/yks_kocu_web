@@ -1,0 +1,13 @@
+.title{
+    letter-spacing: 2px;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Karantina', cursive;
+}
+
+.text {
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Karantina', cursive;
+}

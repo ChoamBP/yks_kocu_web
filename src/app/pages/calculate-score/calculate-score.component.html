@@ -1,0 +1,884 @@
+
+
+
+<div class="container-fluid p-5">
+  <!-- <div
+    class="mb-3 d-flex justify-content-center bg-info text-white p-2"
+    style="letter-spacing: 5px"
+  >
+    <h1 style="font-size: 60px; font-weight: 700;">Puan Hesaplama</h1>
+  </div> -->
+
+  <div class="row">
+    <div class="col-7">
+      <!-- <div class="form-floating mb-2">
+            <input  type="number" class="form-control  " id="correctForTurkish" [(ngModel)]="score" >
+            <label for="correctForTurkish">Orta Öğretim Başarı Puanınızı Giriniz:</label>
+        </div> -->
+      <div class="row">
+        <div class="p-5">
+          <div class="form-floating mb-2">
+            <input
+              type="number"
+              class="form-control"
+              id="correctForTurkish"
+              [(ngModel)]="score"
+            />
+            <label for="correctForTurkish"
+              >Orta Öğretim Başarı Puanınızı Giriniz:</label
+            >
+          </div>
+          <h3 class="title d-flex justify-content-center">
+            TYT PUAN HESAPLAMA
+          </h3>
+          <table class="table table-bordered" style="border-color: black">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Doğru</th>
+                <th scope="col">Yanlış</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Türkçe</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForTurkish"
+                    [(ngModel)]="correctForTurkish"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForTurkish"
+                    [(ngModel)]="falseForTurkish"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Matematik</th>
+                <td style="width: 33%">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForTurkish"
+                    [(ngModel)]="correctForMat"
+                  />
+                </td>
+                <td style="width: 33%">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForTurkish"
+                    [(ngModel)]="falseForMat"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Fen</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForFen"
+                    [(ngModel)]="correctForFen"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForFen"
+                    [(ngModel)]="falseForFen"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Sosyal</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForSocial"
+                    [(ngModel)]="correctForSocial"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForSocial"
+                    [(ngModel)]="falseForSocial"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="title d-flex justify-content-center">
+            AYT PUAN HESAPLAMA
+          </h3>
+          <table class="table table-bordered" style="border-color: black">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Doğru</th>
+                <th scope="col">Yanlış</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Matematik</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForAytMat"
+                    [(ngModel)]="correctForAytMat"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForTurkish"
+                    [(ngModel)]="falseForAytMat"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Fizik</th>
+                <td style="width: 33%">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForAytFiz"
+                    [(ngModel)]="correctForAytFiz"
+                  />
+                </td>
+                <td style="width: 33%">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForTurkish"
+                    [(ngModel)]="falseForAytFiz"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Kimya</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForFen"
+                    [(ngModel)]="correctForAytKim"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForFen"
+                    [(ngModel)]="falseForAytKim"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Biyoloji</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForSocial"
+                    [(ngModel)]="correctForAytBio"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForSocial"
+                    [(ngModel)]="falseForAytBio"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Edebiyat</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForSocial"
+                    [(ngModel)]="correctForAytEde"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForSocial"
+                    [(ngModel)]="falseForAytEde"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Tarih-1</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForSocial"
+                    [(ngModel)]="correctForAytHis1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForSocial"
+                    [(ngModel)]="falseForAytHis1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Coğrafya-1</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForSocial"
+                    [(ngModel)]="correctForAytCog1"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForSocial"
+                    [(ngModel)]="falseForAytCog1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Tarih-2</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForSocial"
+                    [(ngModel)]="correctForAytHis2"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForSocial"
+                    [(ngModel)]="falseForAytHis2"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Coğrafya-2</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForSocial"
+                    [(ngModel)]="correctForAytCog2"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForSocial"
+                    [(ngModel)]="falseForAytCog2"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Felsefe</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForSocial"
+                    [(ngModel)]="correctForAytFel"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForSocial"
+                    [(ngModel)]="falseForAytFel"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Din</th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="correctForSocial"
+                    [(ngModel)]="correctForAytDin"
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="falseForSocial"
+                    [(ngModel)]="falseForAytDin"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                        <h3 class="title">TYT Türkçe</h3>
+                        <span class="badge bg-info text-dark">Tüm puan türlerini etkiler</span> 
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForTurkish" [(ngModel)]="correctForTurkish">
+                                    <label for="correctForTurkish">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForTurkish" [(ngModel)]="falseForTurkish">
+                                    <label for="falseForTurkish">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                        <h3 class="title">TYT Sosyal</h3>
+                        <span class="badge bg-info text-dark">Tüm puan türlerini etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForSocial" [(ngModel)]="correctForSocial">
+                                    <label for="correctForTurkish">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForSocial" [(ngModel)]="falseForSocial">
+                                    <label for="falseForTurkish">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                        <h3 class="title">TYT Matematik</h3>
+                        <span class="badge bg-info text-dark">Tüm puan türlerini etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForTurkish" [(ngModel)]="correctForMat" >
+                                    <label for="correctForTurkish">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForTurkish" [(ngModel)]="falseForMat" >
+                                    <label for="falseForTurkish">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+    
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-secondary">
+                        <h3 class="title">TYT Fen</h3>
+                        <span class="badge bg-info text-dark">Tüm puan türlerini etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForFen" [(ngModel)]="correctForFen" >
+                                    <label for="correctForFen">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForFen" [(ngModel)]="falseForFen"  >
+                                    <label for="falseForFen">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-warning">
+                        <h3 class="title">AYT Tarih-2</h3>
+                        <span class="badge bg-info text-dark">Sözel Puanlarını Etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytHis2" [(ngModel)]="correctForAytHis2" >
+                                    <label for="correctForAytHis2">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytHis2" [(ngModel)]="falseForAytHis2" >
+                                    <label for="falseForAytHis2">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-warning">
+                        <h3 class="title">AYT Coğrafya-2</h3>
+                        <span class="badge bg-info text-dark">Sözel Puanlarını Etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytCog2" [(ngModel)]="correctForAytCog2" >
+                                    <label for="correctForAytCog2">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytCog2" [(ngModel)]="falseForAytCog2" >
+                                    <label for="falseForAytCog2">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+         
+    
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-warning">
+                        <h3 class="title">AYT Felsefe</h3>
+                        <span class="badge bg-info text-dark">Sözel Puanlarını Etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytFel" [(ngModel)]="correctForAytFel" >
+                                    <label for="correctForAytFel">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytFel" [(ngModel)]="falseForAytFel" >
+                                    <label for="falseForAytFel">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-warning">
+                        <h3 class="title">AYT Din Kültürü</h3>
+                        <span class="badge bg-info text-dark">Sözel Puanlarını Etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytDin" [(ngModel)]="correctForAytDin" >
+                                    <label for="correctForAytDin">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytDin" [(ngModel)]="falseForAytDin"  >
+                                    <label for="falseForAytDin">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-success">
+                        <h3 class="title">AYT Edebiyat</h3>
+                        <span class="badge bg-info text-dark">Sözel ve EA puanlarını Etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytEde" [(ngModel)]="correctForAytEde" >
+                                    <label for="correctForAytEde">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytEde" [(ngModel)]="falseForAytEde"  >
+                                    <label for="falseForAytEde">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-success">
+                        <h3 class="title">AYT Tarih-1</h3>
+                        <span class="badge bg-info text-dark">Sözel ve EA puanlarını Etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytHis1" [(ngModel)]="correctForAytHis1">
+                                    <label for="correctForAytHis1">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytHis1" [(ngModel)]="falseForAytHis1">
+                                    <label for="falseForAytHis1">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-success">
+                        <h3 class="title">AYT Coğrafya-1</h3>
+                        <span class="badge bg-info text-dark">Sözel ve EA puanlarını Etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytCog1" [(ngModel)]="correctForAytCog1">
+                                    <label for="correctForAytCog1">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytCog1" [(ngModel)]="falseForAytCog1" >
+                                    <label for="falseForAytCog1">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header  bg-success">
+                        <h3 class="title">AYT Matematik</h3>
+                        <span class="badge bg-info text-dark">Sayısal ve EA puanlarını Etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytMat" [(ngModel)]="correctForAytMat" >
+                                    <label for="correctForAytMat">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytMat" [(ngModel)]="falseForAytMat" >
+                                    <label for="falseForAytMat">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-danger">
+                        <h3 class="title">AYT Fizik</h3>
+                        <span class="badge bg-info text-dark">Sayısal puan türlerini etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytFiz" [(ngModel)]="correctForAytFiz" >
+                                    <label for="correctForAytFiz">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytFiz" [(ngModel)]="falseForAytFiz"  >
+                                    <label for="falseForAytFiz">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-danger">
+                        <h3 class="title">AYT Kimya</h3>
+                        <span class="badge bg-info text-dark">Sayısal puan türlerini etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytKim" [(ngModel)]="correctForAytKim">
+                                    <label for="correctForAytKim">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytKim" [(ngModel)]="falseForAytKim" >
+                                    <label for="falseForAytKim">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 mb-1">
+                <div class="card">
+                    <div class="card-header bg-danger">
+                        <h3 class="title">AYT Biyoloji</h3>
+                        <span class="badge bg-info text-dark">Sayısal puan türlerini etkiler</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="correctForAytBio" [(ngModel)]="correctForAytBio" >
+                                    <label for="correctForAytBio">Doğru  </label>
+                                </div>
+                             </div>
+                            <div class="col-6">
+                                <div class="form-floating mb-2">
+                                    <input  type="number" class="form-control  " id="falseForAytBio" [(ngModel)]="falseForAytBio" >
+                                    <label for="falseForAytBio">Yanlış  </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> -->
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="results py-5">
+        <div class="bg-dark p-2 text-white">
+          <h2
+            class="title my-3 d-flex justify-content-center"
+            style="letter-spacing: 4px"
+          >
+            Sonuçlar
+          </h2>
+        </div>
+
+        <table class="table table-striped ">
+          <thead>
+            <tr>
+              <th scope="col">Puan Türü</th>
+              <th scope="col">Ham Puan</th>
+              <th scope="col">Yerleşme Puanı</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">TYT</th>
+              <td>
+                {{
+                  100 +
+                    (correctForTurkish - falseForTurkish / 4) * 3.3 +
+                    (correctForSocial - falseForSocial / 4) * 3.4 +
+                    (correctForMat - falseForMat / 4) * 3.3 +
+                    (correctForFen - falseForFen / 4) * 3.4
+                }}
+              </td>
+              <td>
+                {{
+                  100 +
+                    (correctForTurkish - falseForTurkish / 4) * 3.3 +
+                    (correctForSocial - falseForSocial / 4) * 3.4 +
+                    (correctForMat - falseForMat / 4) * 3.3 +
+                    (correctForFen - falseForFen / 4) * 3.4 +
+                    score * 0.6
+                }}
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Sayısal</th>
+              <td>
+                {{
+                  (100 +
+                    (correctForTurkish - falseForTurkish / 4) * 3.3 +
+                    (correctForSocial - falseForSocial / 4) * 3.4 +
+                    (correctForMat - falseForMat / 4) * 3.3 +
+                    (correctForFen - falseForFen / 4) * 3.4) *
+                    0.4 +
+                    (60 +
+                      (correctForAytMat - falseForAytMat / 4) * 3 +
+                      (correctForAytFiz - falseForAytFiz / 4) * 2.85 +
+                      (correctForAytKim - falseForAytKim / 4) * 3.07 +
+                      (correctForAytBio - falseForAytBio / 4) * 3.07)
+                }}
+              </td>
+              <td>
+                {{
+                  (100 +
+                    (correctForTurkish - falseForTurkish / 4) * 3.3 +
+                    (correctForSocial - falseForSocial / 4) * 3.4 +
+                    (correctForMat - falseForMat / 4) * 3.3 +
+                    (correctForFen - falseForFen / 4) * 3.4) *
+                    0.4 +
+                    (60 +
+                      (correctForAytMat - falseForAytMat / 4) * 3 +
+                      (correctForAytFiz - falseForAytFiz / 4) * 2.85 +
+                      (correctForAytKim - falseForAytKim / 4) * 3.07 +
+                      (correctForAytBio - falseForAytBio / 4) * 3.07) +
+                    score * 0.6
+                }}
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Eşit Ağırlık</th>
+              <td>
+                {{
+                  (100 +
+                    (correctForTurkish - falseForTurkish / 4) * 3.3 +
+                    (correctForSocial - falseForSocial / 4) * 3.4 +
+                    (correctForMat - falseForMat / 4) * 3.3 +
+                    (correctForFen - falseForFen / 4) * 3.4) *
+                    0.4 +
+                    (60 +
+                      (correctForAytMat - falseForAytMat / 4) * 3 +
+                      (correctForAytEde - falseForAytEde / 4) * 3 +
+                      (correctForAytHis1 - falseForAytHis1 / 4) * 2.8 +
+                      (correctForAytCog1 - falseForAytCog1 / 4) * 3.33)
+                }}
+              </td>
+              <td>
+                {{
+                  (100 +
+                    (correctForTurkish - falseForTurkish / 4) * 3.3 +
+                    (correctForSocial - falseForSocial / 4) * 3.4 +
+                    (correctForMat - falseForMat / 4) * 3.3 +
+                    (correctForFen - falseForFen / 4) * 3.4) *
+                    0.4 +
+                    (60 +
+                      (correctForAytMat - falseForAytMat / 4) * 3 +
+                      (correctForAytEde - falseForAytEde / 4) * 3 +
+                      (correctForAytHis1 - falseForAytHis1 / 4) * 2.8 +
+                      (correctForAytCog1 - falseForAytCog1 / 4) * 3.33) +
+                    score * 0.6
+                }}
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">Sözel</th>
+              <td>
+                {{
+                  (100 +
+                    (correctForTurkish - falseForTurkish / 4) * 3.3 +
+                    (correctForSocial - falseForSocial / 4) * 3.4 +
+                    (correctForMat - falseForMat / 4) * 3.3 +
+                    (correctForFen - falseForFen / 4) * 3.4) *
+                    0.4 +
+                    (60 +
+                      (correctForAytEde - falseForAytEde / 4) * 3 +
+                      (correctForAytHis1 - falseForAytHis1 / 4) * 2.8 +
+                      (correctForAytCog1 - falseForAytCog1 / 4) * 3.33 +
+                      (correctForAytHis2 - falseForAytHis2 / 4) * 2.91 +
+                      (correctForAytCog2 - falseForAytCog2 / 4) * 2.91 +
+                      (correctForAytFel - falseForAytFel / 4) * 3 +
+                      (correctForAytDin - falseForAytDin / 4) * 3.33)
+                }}
+              </td>
+              <td>
+                {{
+                  (100 +
+                    (correctForTurkish - falseForTurkish / 4) * 3.3 +
+                    (correctForSocial - falseForSocial / 4) * 3.4 +
+                    (correctForMat - falseForMat / 4) * 3.3 +
+                    (correctForFen - falseForFen / 4) * 3.4) *
+                    0.4 +
+                    (60 +
+                      (correctForAytEde - falseForAytEde / 4) * 3 +
+                      (correctForAytHis1 - falseForAytHis1 / 4) * 2.8 +
+                      (correctForAytCog1 - falseForAytCog1 / 4) * 3.33 +
+                      (correctForAytHis2 - falseForAytHis2 / 4) * 2.91 +
+                      (correctForAytCog2 - falseForAytCog2 / 4) * 2.91 +
+                      (correctForAytFel - falseForAytFel / 4) * 3 +
+                      (correctForAytDin - falseForAytDin / 4) * 3.33) +
+                    score * 0.6
+                }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

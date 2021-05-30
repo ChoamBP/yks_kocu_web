@@ -1,0 +1,57 @@
+
+
+<div class="spinner"*ngIf="dataLoaded==false">
+    <div  class="spinner-border text-primary" role="status">
+        
+      </div>
+    <span style="display: block; color:blue;">Yükleniyor...</span>
+</div>
+
+<div class="container py-5">
+      <mat-tab-group  mat-align-tabs="center" (focusChange)="focus($event)" >
+        <mat-tab label="TYT" >
+          <mat-tab-group (focusChange)="myTabFocusChange($event)" >
+            <mat-tab *ngFor="let item of topics.tyt; let i = index; " label="{{item.lesson_name}} " >   
+    
+                <div class="container mt-5">
+                  <a *ngIf="visible==true" (click)="save(topics.tyt)" style="width: 100%;" class="btn btn-primary mb-3">Kaydet</a>
+                        <ul class="list-group" style="opacity: 0.7;" >
+                            
+                            <li class="list-group-item" *ngFor="let topic of topics.tyt[i].subjects; let j = index;"  >
+                            <input class="form-check-input me-1" [id]="j" type="checkbox" value="" [(ngModel)]="select[j]" (click)="setVisible()"  aria-label="...">
+                            <label style="width: 80%; height: 100%; opacity: 1 ;"   [for]="j">{{topic}}</label> 
+                            </li>
+                        
+                        </ul>
+                        </div>
+            </mat-tab>
+           
+        </mat-tab-group> 
+
+
+        </mat-tab>
+        <mat-tab label="AYT">
+          <mat-tab-group (focusChange)="myTabFocusChange($event)" >
+            <mat-tab *ngFor="let item of topics.ayt; let i = index; " label="{{item.lesson_name}} " >   
+    
+                <div class="container mt-5">
+                  <a *ngIf="visible==true" (click)="save(topics.ayt)" style="width: 100%;" class="btn btn-primary mb-3">Kaydet</a>
+                        <ul class="list-group" style="opacity: 0.7;" >
+                            
+                            <li class="list-group-item" *ngFor="let topic of topics.ayt[i].subjects; let j = index;"  >
+                            <input class="form-check-input me-1" [id]="j" type="checkbox" value="" [(ngModel)]="select[j]" (click)="setVisible()"  aria-label="...">
+                            <label style="width: 80%; height: 100%; opacity: 1 ;"   [for]="j">{{topic}}</label> 
+                            </li>
+                        
+                        </ul>
+                        </div>
+            </mat-tab>
+           
+        </mat-tab-group> 
+
+          
+        </mat-tab>
+
+
+      </mat-tab-group>
+</div> 

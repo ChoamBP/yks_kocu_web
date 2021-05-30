@@ -1,0 +1,32 @@
+.neumorphism{
+    
+    background: linear-gradient(225deg, #9bd7d8, #83b5b6);
+    box-shadow:  -5px 5px 38px #3a5051,
+             5px -5px 38px #b4f9fa;
+}
+
+.input{
+    margin: auto;
+    margin-top: 20px;
+    background: #91c9ca;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+    border-radius: 20px ;
+    border: none;
+    box-shadow:  6px 6px 6px #6e999a, -6px -6px 6px #b4f9fa ;
+}
+table {
+    width: 100%;
+  }
+
+  .example-viewport {
+      padding: 0;
+    height: 1000px;
+    width: 1300px;
+   
+  }
+  
+  .example-item {
+    height: 50px;
+  }

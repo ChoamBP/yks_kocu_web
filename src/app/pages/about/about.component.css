@@ -1,0 +1,59 @@
+h1.title{
+    font-size: 75px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Orelega One', cursive;
+}
+h3.title{
+    font-size: 35px;
+    font-weight: 900;
+    font-family: 'Karantina', cursive;
+}
+p.text{
+    font-size: 16px;
+    font-family: 'Karantina', cursive;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+.btn {
+    margin-top:24px;
+    font-weight: 400;
+    display: inline-block;
+    background-color: transparent;
+    border: 1.2px solid transparent;
+    color: #fff;
+    border-radius: 2.4px;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.btn-outline {
+    color:#1e5763;
+    border-color: #132c31;
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    color: #212529;
+    background-color: #fff;
+}
+
+.btn-social {
+    width:50px;
+    height: 50px;
+    border-radius: 40%;
+    font-size: 30px;
+    line-height: 12px;
+}
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    margin-left: 6px;
+
+}

@@ -1,0 +1,53 @@
+<!-- 
+<div class="container" style="min-height: 100vH;">
+<mat-vertical-stepper #stepper>
+  <mat-step>
+    <form >
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      
+        
+        <input class="form-control" matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+     
+      <div>
+        <button class="btn btn-success" mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step >
+    <form >
+      <ng-template matStepLabel>Fill out your address</ng-template>
+  
+        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      <div>
+        <button class="btn btn-warning" mat-button matStepperPrevious>Back</button>
+        <button class="btn btn-success" mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>
+</div> -->
+
+<div class="container">
+  <div class="bar">
+    <svg>
+      <circle cx='50%' cy='50%' r="50%"></circle>
+    </svg>
+    <h1>TYT<br>91%</h1>
+  </div>
+
+  <div class="bar">
+    <svg>
+      <circle cx='50%' cy='50%' r="50%" [style]="get()"></circle>
+    </svg>
+    <h1>AYT<br>{{no}}</h1>
+  </div>
+</div>

@@ -1,0 +1,179 @@
+.spinner{
+    
+    margin-left: 40%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    
+}
+:host{
+    text-transform: capitalize;
+}
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    background: #8FC6C7;
+    box-shadow:  5px 5px 12px #7aa8a9,
+                 -5px -5px 12px #a4e4e5;
+    
+}
+
+.inner-chart-container{
+    height: 75px;
+    width: 98%;
+    border-radius: 12px;
+    padding: 15px;
+    background: #8FC6C7;
+    box-shadow:  5px 5px 12px #7aa8a9,
+                 -5px -5px 12px #a4e4e5;
+}
+
+.innerchart{
+    height: 40%;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: #8FC6C7;
+    box-shadow:inset  5px 5px 12px #7aa8a9,
+               inset  -5px -5px 12px #a4e4e5;
+    float: right;
+}
+.chart-bar{
+    height: 100%;
+    background-color: #800080;
+    border-radius: 12px;
+    text-align: center; 
+    color: white;
+    animation: 2s animate-chart ease forwards;
+}
+
+
+.neumorphism{
+    border-radius: 126px;
+    background: linear-gradient(225deg, #9bd7d8, #83b5b6);
+    box-shadow:  -5px 5px 38px #3a5051,
+             5px -5px 38px #b4f9fa;
+}
+
+
+
+.neubutton{
+
+    margin-top: 20px;
+    background: #5C636A;
+   
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
+    transition: 0.5s;
+    letter-spacing: 3px;
+
+    box-shadow:  6px 6px 6px #6e999a, -6px -6px 6px #b4f9fa ;
+}
+
+@keyframes animate-chart {
+    0%{
+        width: 10%;
+    }
+}
+
+.neuTitle   {
+        background: #8FC6C7;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        position: relative;
+        text-shadow: #b4f9fa 2px 4px 2px;
+        font-size: 70px;
+    }  
+
+    .neuText{
+        background: #8FC6C7;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow: #274949 1px 2px 1px;
+        font-size: 18px;
+    }
+    .bar {
+        display: inline-block;
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        position: relative;
+        background: #8FC6C7;
+        box-shadow: -3px -3px 7px #7aa8a9, 3px 3px 5px #a4e4e5;
+        overflow: hidden;
+        margin: 50px;
+      }
+      .bar:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 70%;
+        width: 70%;
+        border-radius: 50%;
+        box-shadow: inset -3px -3px 7px #7aa8a9,
+          inset 3px 3px 5px #a4e4e5;
+    
+          
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+      
+      svg circle {
+        position: absolute;
+        transform: scale(0.939);
+        transform-origin: center;
+        fill: none;
+        stroke: #800080;
+        /*#1FB2D5*/
+        stroke-width: 26%;
+        stroke-dasharray: 945px;
+        /* stroke-dashoffset: 945px; */
+      }
+      .tyt svg circle {
+        animation: bar_1 1s ease forwards;
+      }
+      .ayt svg circle {
+        animation: bar_2 1s ease forwards;
+      }
+
+      h1 {
+        position: absolute;
+        font-size: 20px;
+        font-family: "Montserrat";
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      /* svg circle {
+          stroke-dashoffset: calc(950 - (950*10) / 100);
+      } */
+      @keyframes bar_1 {
+        0% {
+          stroke-dashoffset: 945px;
+        }
+        100% {
+          
+        }
+      }
+      @keyframes bar_2 {
+        0% {
+          stroke-dashoffset: 945px;
+        }
+        100% {
+         
+        }
+      }
+
+      

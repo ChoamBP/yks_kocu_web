@@ -1,0 +1,60 @@
+
+
+   
+ <div class="container p-2">
+    <div class="form-floating mb-5">
+        <input type="text" class="form-control input" id="search" [(ngModel)]="filterText"
+            placeholder="Örnek: İstanbul Sabahattin Zaim Üniversitesi" />
+        <label for="search" class="form-label">Üniversite Adı</label>
+    </div>
+
+    <div >
+      <table class="table neumorphism">
+      <thead>
+           
+        <tr>
+          
+          <th style="border: 1px solid black; padding-left: 20px; width:237px;">Universite</th>
+          <th style="border: 1px solid black; padding-left: 20px; width:106px;">Şehir</th>
+          <th style="border: 1px solid black; padding-left: 20px; width:114px;">Türü</th>
+          <th style="border: 1px solid black; padding-left: 20px; width:187px;">Fakulte</th>
+          <th style="border: 1px solid black; padding-left: 20px; width:172px;">Bolüm</th>
+          <th style="border: 1px solid black; padding-left: 20px; width:115px;">Ücr.</th>
+          <th style="border: 1px solid black; padding-left: 20px; width:67px;">Puan Turu</th>
+          <th style="border: 1px solid black; padding-left: 20px; width:57px;">Kon.</th>
+          <th style="border: 1px solid black; padding-left: 20px; width:57px;">Yer.</th>
+          <th style="border: 1px solid black; padding-left: 20px; width:84px;">Taban P.</th>
+          <th style="border: 1px solid black; padding-left: 20px; width:86px;">Tavan P.</th>
+
+        </tr>
+     
+      </thead>
+    </table>
+        <table class=" neumorphism">
+
+            
+            <tbody>
+            
+              <cdk-virtual-scroll-viewport itemSize="30" class="example-viewport">
+                <tr  *cdkVirtualFor="let uni of university |  filterUni: filterText">
+                   
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.universite}}</td>
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.sehir}}</td>
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.universite_turu}}</td>
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.fakulte}}</td>
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.bolum}}</td>
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.ucretlendirme}}</td>
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.puan_turu}}</td>
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.genel_kontenjan}}</td>
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.genel_yerlestirme}}</td>
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.taban_puan}}</td>
+                    <td style="border: 1px solid black; padding: 20px;">{{uni.tavan_puan}}</td>
+
+          </tr>
+        </cdk-virtual-scroll-viewport>
+            </tbody>
+            
+          </table>
+        
+    </div>
+</div> 

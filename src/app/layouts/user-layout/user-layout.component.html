@@ -1,0 +1,42 @@
+<input type="checkbox" hidden  id="check" [(ngModel)]="isChecked" />
+
+<header>
+    <label for="check" style="display: inline;">
+        <i [class]="getClass()" id="sidebar_btn"></i>
+      </label>
+  <div class="left_area">
+    <h3>YKS <span>KOÇU</span></h3>
+  </div>
+  
+  <div class="right_area">
+    <a (click)="logout()" [routerLink]="['/guest']" routerLinkActive="router-link-active"   class="logout_btn">Çıkış</a>
+  </div>
+  
+</header>
+
+<div class="sidebar">
+  <div class="center">
+    <img
+      class="profile_image"
+      src="{{user.profile_picture_url}}"
+      alt="{{user.name}}"
+    />
+    
+    <h4 style="text-transform: capitalize;">{{user.name}}</h4>
+  </div>
+  <a routerLink="/user/profile"> <i class="far fa-user"></i> <span>Profil</span> </a>
+  <a routerLink="/user/statistics"> <i class="fas fa-sort-amount-up"></i> <span>İlerleme Durumu</span> </a>
+  <a routerLink="/user/techniques"> <i class="fas fa-cogs"></i> <span>Çalışma Teknikleri</span> </a>
+  <a routerLink="/user/topics"> <i class="fas fa-table"></i> <span>Konu Takip</span> </a>
+  <a routerLink="/user/create"> <i class="far fa-edit"></i> <span>Çalışma Oluştur</span> </a>
+  <a routerLink="/user/calculate"> <i class="fas fa-calculator"></i><span>Puan Hesapla</span> </a>
+  <a routerLink="/user/universities"> <i class="fas fa-university"></i> <span>Üniversiteler</span> </a>
+ 
+  <a routerLink="/user/settings"> <i class="fas fa-sliders-h"></i> <span>Ayarlar</span> </a>
+</div>
+
+<div class="content">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+</div>
+

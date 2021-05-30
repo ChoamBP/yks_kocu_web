@@ -1,0 +1,72 @@
+.body{
+    margin: auto;
+    
+    width: 550px;
+    height: 95vh;
+    padding: 40px;
+   /* border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #ecf0f3;
+
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white; */
+    border-radius: 20px;
+background: linear-gradient(45deg, #83b5b6, #9bd7d8);
+box-shadow:inset  20px -20px 40px #6e999a,
+inset -20px 20px 40px #b4f9fa;
+}
+
+.input{
+    margin: auto;
+    margin-top: 20px;
+    background: #91c9ca;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+    border-radius: 20px ;
+    border: none;
+    box-shadow: inset 6px 6px 6px #6e999a,inset -6px -6px 6px #b4f9fa ;
+}
+
+.login-button{
+
+    margin-top: 20px;
+    background: #1da1f2;
+   
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
+    transition: 0.5s;
+    letter-spacing: 3px;
+
+    box-shadow:  6px 6px 6px #6e999a, -6px -6px 6px #b4f9fa ;
+}
+
+.title{
+   
+    width: 70%;
+    margin: auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+    box-shadow:  7px 7px 10px #6e999a, -7px -7px 10px #b4f9fa ;
+}
+
+.img{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: url("../../../../img/user.png");
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+    border:none;
+    box-shadow: 7px 7px 10px #6e999a, -7px -7px 10px #b4f9fa ;
+}
+
+.img:hover{
+    border: 1px solid black;
+    
+}

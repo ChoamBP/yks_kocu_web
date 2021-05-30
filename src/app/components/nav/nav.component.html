@@ -1,0 +1,134 @@
+
+<header class="p-3 bg-info text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" class="nav-link px-2 text-secondary">Ana Sayfa</a></li>
+        <li><a  class="nav-link px-2 text-white" routerLink="/guest/about">Hakkımızda</a></li>
+        <li><a class="nav-link px-2 text-white" routerLink="/guest/universities">Üniversiteler</a></li>
+        <li><a class="nav-link px-2 text-white" routerLink="/guest/topics">Ders Konuları</a></li>
+        <li><a href="#" class="nav-link px-2 text-white" routerLink="/guest/techniques">Çalışma Teknikleri</a></li>
+        <li><a class="nav-link px-2 text-white" routerLink="/guest/calcuate">Puan Hesapla</a></li>
+       
+      </ul>
+
+      <div class="text-end">
+        <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">Giriş Yap</button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Kayıt Ol</button>
+      </div> 
+    </div>
+  </div> 
+</header>
+<!-- Canvas-->
+
+
+<div class="offcanvas offcanvas-end body" style="background-color: #91c9ca;  margin-right:10px;" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+  
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h1 id="offcanvasRightLabel" class="title d-flex justify-content-center">Giriş Yap</h1>
+   
+    <form [formGroup]="loginForm">
+      <div class="form-floating">
+        <input type="email" class="form-control input" id="floatingInput" formControlName="email" placeholder="name@example.com">
+        <label for="floatingInput">Kullanıcı Adı</label>
+      </div>
+      <div class="form-floating mt-2">
+        <input type="password" class="form-control input" id="floatingPassword" formControlName="password"placeholder="Password">
+        <label for="floatingPassword">Şifre</label>
+      </div>
+  
+      <div class="checkbox my-3">
+       
+      </div>
+      <button class="w-100 btn btn-lg btn-primary login-button" type="submit" (click)="login()" data-bs-dismiss="offcanvas">Giriş Yap</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+    </form>
+ 
+  </div>
+</div>
+
+<!--Register Canvas-->
+
+<div class="offcanvas offcanvas-start body"style="background-color: #91c9ca; margin-left:10px;" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+ 
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title title d-flex justify-content-center" id="offcanvasExampleLabel">Kayıt Ol</h1 >
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+
+  <div class="offcanvas-body">
+   
+   
+    <form [formGroup]="registerForm">
+      <div class="image mb-3 d-flex justify-content-center" >
+        <!-- <img class="img" src="https://media-exp1.licdn.com/dms/image/C4E03AQGD8d0MJmWy6g/profile-displayphoto-shrink_800_800/0/1601313293190?e=1622678400&v=beta&t=0B7mghtpape1REv6Stv8JYjtv8DOB2a7yyFi1nulbzM"  alt=""> -->
+        
+        <label for="img" class="img"></label>
+        <input id="img" type="file" formControlName="profile_picture_url" style="background: url({{selectedImg}});" (change)="getImg($event)" [(ngModel)]="selectedImg" accept=".jpg,.png" hidden>
+     
+      </div>
+
+
+        <div class="form-floating">
+          <input type="text" id="lastName" class="form-control input" formControlName="name" placeholder="Ad Soyad">
+          <label for="lastName">Ad Soyad</label>
+        </div>
+     
+
+        <div class="form-floating">
+          <input type="text" id="e-posta" class="form-control input" formControlName="email" placeholder="E-posta Adresi">
+          <label for="e-posta">E-posta Adresi</label>
+        </div>
+      
+        <div class="form-floating">
+          <input type="text" id="e-posta" class="form-control input" formControlName="username" placeholder="Kullanıcı Adı">
+          <label for="e-posta">Kullanıcı Adı</label>
+        </div>
+        <select class="form-select input" aria-label="Default select example" formControlName="gender">
+
+          <option value="Erkek">Erkek</option>
+          <option value="Kadın">Kadın</option>
+        
+        </select>
+  
+        <select class="form-select input" aria-label="Default select example" formControlName="education_class">
+       
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">Mezun</option>
+        
+        </select>
+        <div class="form-floating">
+          <input type="password" id="firstName" class="form-control input" placeholder="Şifre" formControlName="password">
+          <label for="firstName">Şifre</label>
+        </div>
+  
+      
+
+   
+      <button class="mt-3 w-100 btn btn-lg btn-primary login-button" (click)="register()" type="submit" data-bs-dismiss="offcanvas">Kayıt Ol</button>
+    
+    
+    </form>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<!---->
+
+<!--Table-->
+
+
+<!--Footer-->
+

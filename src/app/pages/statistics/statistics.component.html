@@ -1,0 +1,156 @@
+<div class="" style="margin-bottom: 10%; padding: 50px;">
+<div class="container p-5">
+    <h1 class="neuTitle" style="text-align: center; font-weight: bold;">İlerleme Durumu</h1>
+
+
+    <div class="d-flex justify-content-center row">
+        <div class="col-6  d-flex justify-content-center tyt">
+            <div class="bar">
+                <svg>
+                <circle cx='50%' cy='50%' r="50%" [style]="getTytTotal()"></circle>
+                </svg>
+                <h1>TYT<br>% {{tytTotal}}</h1>
+            </div>
+
+        </div>
+        <div class="col-6 d-flex justify-content-center ayt">
+            <div class="bar">
+                <svg>
+                <circle cx='50%' cy='50%' r="50%" [style]="getAytTotal()"></circle>
+                </svg>
+                <h1>AYT<br>% {{aytTotal}}</h1>
+            </div>
+        </div>
+
+        <div class="col-6 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary neubutton py-2 px-3" style="background-color: #0D9DBB;"  data-bs-toggle="modal" data-bs-target="#tytModal">TYT Detaylar</button>
+
+        </div>
+        <div class="col-6  d-flex justify-content-center">
+            <button type="button" class="btn btn-primary neubutton py-2 px-3" style="background-color: #0D9DBB;" data-bs-toggle="modal" data-bs-target="#aytModal">AYT Detaylar</button>
+
+        </div>
+</div>
+    <!-- <div class="row mt-5">
+      
+            <div class="col-md-12 mt-5">
+                <div class="inner-chart-container">
+                    <span class="neuText">TYT</span>
+                    <div class="innerchart">
+                        <div class="chart-bar"  style="width: 92%; text-align: center; color: white;">
+                        <h5 style="font-weight: bold;"> %92</h5>
+                        </div>      
+                    </div>      
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-3">
+                <button type="button" class="btn btn-primary neubutton" style="background-color: #0D9DBB;"  data-bs-toggle="modal" data-bs-target="#tytModal">TYT Detaylar</button>
+            </div>
+      
+
+        
+            <div class="col-md-12 mt-5">
+                <div class="inner-chart-container">
+                    <span class="neuText">AYT</span>
+                    <div class="innerchart">
+                        <div class="chart-bar " style="width: 50%; text-align: center; color: white;"> 
+                            <h5 style="font-weight: bold;"> %50</h5>        
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <div class="d-flex justify-content-end mt-3">
+                <button type="button" class="btn btn-primary neubutton" style="background-color: #0D9DBB;" data-bs-toggle="modal" data-bs-target="#aytModal">AYT Detaylar</button>
+            </div>
+
+       
+    </div> -->
+</div>
+
+</div>
+
+<!--TYT Modal-->
+
+<div class="modal fade " id="tytModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl neumorphism" style="border-radius: 12px;">
+      <div class="modal-content neumorphism" style="border-radius: 12px;">
+        <div class="modal-header">
+          <h1 class="modal-title" style="display: block; width: 100%; text-align: center; font-weight: bold;" id="staticBackdropLabel"> TYT Konuları Detay</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+  
+              <div class="row">
+                  <div class="col-6"*ngFor="let lesson of topics.tyt;">
+                    <div class="inner-chart-container mt-3" >
+                        <span class="neuText mb-2" style="display: block; font-weight: bold;" >{{lesson.lesson_name}}</span>
+                        <div class="innerchart">
+                            <div class="chart-bar"  [style]="getStyle(lesson.subject_state)">
+                            <h5 style="font-weight: bold;"> %{{calculatePercent(lesson.subject_state)}}</h5>
+                            </div>      
+                        </div>     
+                    </div>
+          
+                  
+                  </div>
+  
+
+
+          </div>
+         
+        </div>
+          <div class="modal-footer">
+            <button type="button" class="btn neubutton btn-secondary " data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!--AYT Modal-->
+<div class="modal fade " id="aytModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl neumorphism" style="border-radius: 12px;">
+    <div class="modal-content neumorphism" style="border-radius: 12px;">
+      <div class="modal-header">
+        <h1 class="modal-title" style="display: block; width: 100%; text-align: center; font-weight: bold;" id="staticBackdropLabel"> AYT Konuları Detay</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-6" *ngFor="let lesson of topics.ayt;">
+                    <div class="inner-chart-container mt-3" >
+                        <span class="neuText mb-2" style="font-weight: bold;display:block; font-weight: bold;">{{lesson.lesson_name}}</span>
+                        <div class="innerchart">
+                            <div class="chart-bar"  [style]="getStyle(lesson.subject_state)">
+                            <h5 style="font-weight: bold;"> %{{calculatePercent(lesson.subject_state)}}</h5>
+                            </div>      
+                        </div>     
+                    </div>
+          
+
+                </div>
+
+
+
+
+        </div>
+       
+      </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn neubutton btn-secondary "
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+

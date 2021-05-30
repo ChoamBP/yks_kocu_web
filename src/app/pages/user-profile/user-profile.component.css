@@ -1,0 +1,7 @@
+.neumorphism{
+    border-radius: 126px;
+    background: linear-gradient(225deg, #9bd7d8, #83b5b6);
+    box-shadow:  -5px 5px 38px #3a5051,
+             5px -5px 38px #e8ffff;
+}
+

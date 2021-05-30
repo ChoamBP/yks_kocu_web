@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="main-body">
+
+    
+      
+        
+      <div class="row gutters-sm ">
+        <div class="col-md-4">
+            <div class="card neumorphism">
+              <div class="card-body">
+                <div class="d-flex flex-column align-items-center text-center">
+                  <img
+                    src="{{user.profile_picture_url}}"
+                    alt="Admin"
+                    class="rounded-circle neumorphism"
+                    width="150"
+                    height="150"
+                  />
+                  <div class="mt-3">
+                    
+               
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+        <div class="col-md-8">
+          <div class="card neumorphism mb-3 p-2" style="border-radius: 6px;">
+            <div class="card-body">
+              <div class="row">
+                <div class="d-flex justify-content-start ">
+                    <h6 class="mb-0  px-5" style="font-size: 16px;"><b>{{user.name}}</b></h6>
+                  </div>
+                  
+            
+              </div>
+              <hr />
+              <div class="row">
+                <div class="d-flex justify-content-start">
+                  <h6 class="mb-0  px-5" style="font-size: 16px;">{{user.username}}</h6>
+                </div>
+       
+              </div>
+  
+              <hr />
+              <div class="row">
+                <div class="d-flex justify-content-start">
+                  <h6 class="mb-0  px-5" style="font-size: 16px;">{{user.email}}</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+            
+                </div>
+              </div>
+              <hr />
+             
+              <div class="row">
+                <div class="d-flex justify-content-start">
+                  <h6 class="mb-0  px-5" style="font-size: 16px;">{{user.class}} . Sınıf</h6>
+                </div>
+        
+              </div>
+
+              
+            </div>
+          </div>
+        </div>
+
+    </div>
+      
+    </div>
+
+    <hr>
+
+    <app-statistics></app-statistics>
+  </div>
