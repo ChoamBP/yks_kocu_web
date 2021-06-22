@@ -31,6 +31,7 @@ export class NavComponent implements OnInit {
   registerModel!:UserRegisterModel;
   loginModel:LoginModel={email:"",password:""};
   registerControl:boolean=false;
+  load:boolean=false;
 
   constructor( private formBuilder: FormBuilder,
     private toastrService: ToastrService,
@@ -72,6 +73,7 @@ export class NavComponent implements OnInit {
   async register(){
 
       if(this.registerForm.valid){
+        this.load=true;
         this.registerModel = Object.assign({}, this.registerForm.value); 
       
         this.loginModel.email=this.registerModel.username;
@@ -79,16 +81,18 @@ export class NavComponent implements OnInit {
         
         if(this.registerModel.profile_picture_url !=''){ 
           this.uploadImgFireBase();
-          await this.sleep(3000);
+          await this.sleep(5000);
           
         }
         this.authService.register(this.registerModel).subscribe(response=>{
           this.loginFromReg(this.loginModel);
+          this.load=false;
           this.toastrService.success("Kayıt işlemi başarıyla gerçekleşmiştir.","Başarılı.");
          
         },
         responseError=>{
           this.toastrService.error("Bu kullanıcı zaten mevcut ","Hata");
+          this.load=false;
         })
        
       }
@@ -97,18 +101,6 @@ export class NavComponent implements OnInit {
         this.toastrService.show("valid değil")
       }
 
-
-
-
-    console.log(this.selectedImg)
-   
-   
-    // var val =this.storage.upload(myuuid,this.selectedImg);
-    //console.log("val")
-    //console.log(val)
-    
-   // let registerModel = Object.assign({}, this.registerForm.value);
-    
   }
 
   sleep(ms:number) {
@@ -128,7 +120,7 @@ export class NavComponent implements OnInit {
   }
 
 
-  uploadImgFireBase(){
+   uploadImgFireBase(){
     let myuuid = uuidv4();
  
     const fileRef =this.storage.ref(myuuid);
@@ -159,16 +151,18 @@ export class NavComponent implements OnInit {
   
 
     if (this.loginForm.valid ) {
+      this.load=true;
      let loginModel = Object.assign({}, this.loginForm.value);
       this.authService.login(loginModel).subscribe(response=>{
         this.toastrService.info("başarılı")
      
-       
+       this.load=false;
         this.localStorageService.setCurrentUser(response);
         this.router.navigate(["user"])
        
 
       },responseError=>{
+        this.load=false;
         this.toastrService.warning("Kullanıcı adı veya şifresi hatalı !! ")
       })
     

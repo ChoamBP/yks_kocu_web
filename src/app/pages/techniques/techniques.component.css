@@ -3,6 +3,7 @@
     font-size: 30px;
     font-weight: 900;
     font-family: 'Karantina', cursive;
+    padding: 20px;
 }
 
 .text {
@@ -10,4 +11,18 @@
     font-size: 18px;
     font-weight: 400;
     font-family: 'Karantina', cursive;
+    
 }
+
+
+.neuTitle   {
+    background: #8FC6C7;
+    -webkit-background-clip: text;
+    background-clip: text;
+  
+    position: relative;
+    font-weight: bold;
+    text-shadow: #b4f9fa 2px 4px 2px;
+    font-size: 70px;
+   
+  }  

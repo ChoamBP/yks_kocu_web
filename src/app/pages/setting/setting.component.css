@@ -18,18 +18,51 @@ img {
 .text-muted {
     font-weight: 300;
 }
-.form-control {
-    display: block;
+
+.input{
+    margin: auto;
+  
+    background: #91c9ca;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 14px;
+    border-radius: 20px ;
+    border: none;
+    box-shadow:  6px 6px 6px #6e999a, -6px -6px 6px #b4f9fa ;
+}
+
+
+.neuTitle   {
+    background: #8FC6C7;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    text-shadow: #b4f9fa 2px 4px 2px;
+    font-size: 70px;
+}  
+
+.img{
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: url("../../../../img/logo.png");
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+    border:none;
+    box-shadow: 7px 7px 10px #6e999a, -7px -7px 10px #b4f9fa ;
+}
+
+.data-load{
+    position: absolute;
     width: 100%;
-    height: calc(1.5em + 0.75rem + 2px);
-    padding: 0.375rem 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #4d5154;
-    background-color: #ffffff;
-    background-clip: padding-box;
-    border: 1px solid #eef0f3;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    height: 100%;
+    background-color: #8FC6C7;
+    opacity: 0.4;
+    z-index: 100;
 }

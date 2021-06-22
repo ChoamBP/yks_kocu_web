@@ -1,17 +1,28 @@
 
+
+<div class="spinner data-load" *ngIf="load==true">
+  <div style="position: absolute; top:50%;left:50%;">
+  <div  class="spinner-border text-primary "  role="status">
+      
+    </div>
+  <span style="display: block; color:blue;">Yükleniyor...</span></div>
+</div>
+
+
 <header class="p-3 bg-info text-white">
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
       </a>
-
+     <a href=""><img src="https://firebasestorage.googleapis.com/v0/b/ykskocu-a2caf.appspot.com/o/f5608f87-5a68-4eca-8624-7cdfaed23a2d?alt=media&token=a0b39b77-b820-44a5-8922-3117c7b7c01b" alt="" style="width: 100px; height: 100px;"></a>
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 text-secondary">Ana Sayfa</a></li>
+        
+        <li><a href="#" class="nav-link px-2 text-white">Ana Sayfa</a></li>
         <li><a  class="nav-link px-2 text-white" routerLink="/guest/about">Hakkımızda</a></li>
         <li><a class="nav-link px-2 text-white" routerLink="/guest/universities">Üniversiteler</a></li>
         <li><a class="nav-link px-2 text-white" routerLink="/guest/topics">Ders Konuları</a></li>
-        <li><a href="#" class="nav-link px-2 text-white" routerLink="/guest/techniques">Çalışma Teknikleri</a></li>
+        <li><a href="#" class="nav-link px-2 text-white" routerLink="/guest/techniques">Nasıl Ders Çalışmalıyım</a></li>
         <li><a class="nav-link px-2 text-white" routerLink="/guest/calcuate">Puan Hesapla</a></li>
        
       </ul>
@@ -66,13 +77,11 @@
 
   <div class="offcanvas-body">
    
-   
     <form [formGroup]="registerForm">
       <div class="image mb-3 d-flex justify-content-center" >
-        <!-- <img class="img" src="https://media-exp1.licdn.com/dms/image/C4E03AQGD8d0MJmWy6g/profile-displayphoto-shrink_800_800/0/1601313293190?e=1622678400&v=beta&t=0B7mghtpape1REv6Stv8JYjtv8DOB2a7yyFi1nulbzM"  alt=""> -->
-        
+      
         <label for="img" class="img"></label>
-        <input id="img" type="file" formControlName="profile_picture_url" style="background: url({{selectedImg}});" (change)="getImg($event)" [(ngModel)]="selectedImg" accept=".jpg,.png" hidden>
+        <input id="img" type="file" formControlName="profile_picture_url" (change)="getImg($event)" [(ngModel)]="selectedImg" accept=".jpg,.png" hidden>
      
       </div>
 
@@ -93,14 +102,14 @@
           <label for="e-posta">Kullanıcı Adı</label>
         </div>
         <select class="form-select input" aria-label="Default select example" formControlName="gender">
-
+          <option selected>Cinsiyetiniz</option>
           <option value="Erkek">Erkek</option>
           <option value="Kadın">Kadın</option>
         
         </select>
   
         <select class="form-select input" aria-label="Default select example" formControlName="education_class">
-       
+          <option selected>Sınıf Seçiniz</option>
           <option value="9">9</option>
           <option value="10">10</option>
           <option value="11">11</option>

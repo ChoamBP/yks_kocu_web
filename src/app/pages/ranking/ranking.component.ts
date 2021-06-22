@@ -1,3 +1,5 @@
+import { RankServiceService } from './../../services/rank-service.service';
+import { RankModel } from './../../model/rankModel';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -8,10 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RankingComponent implements OnInit {
 
-  constructor() { }
+  ranks:RankModel[]=[];
+
+  constructor(private rankService:RankServiceService) { }
 
   ngOnInit(): void {
+    this.getRank();
    
+  }
+
+  getRank(){
+    this.rankService.getRank().subscribe(response=>{
+      this.ranks=response;
+      console.log(this.ranks)
+    })
   }
 
 }

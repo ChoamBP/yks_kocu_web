@@ -1,6 +1,74 @@
-<!-- 
-<div class="container" style="min-height: 100vH;">
-<mat-vertical-stepper #stepper>
+
+<div class="container p-5" style="min-height: 100vH;">
+ <h1 class="d-flex justify-content-center neuTitle mb-5">Çalışma Oluştur</h1> 
+<div class="row d-flex justify-content-center">
+  
+  <div class="col-8 neumorphism p-5">
+    <form [formGroup]="createWorkingForm">
+
+      <div class="form-floating mb-3">
+        <input type="date"  formControlName="date" class="form-control input" id="floatingInput">
+        <label for="floatingInput">Tarih</label>
+      </div>
+
+   
+     
+      <div class="row mb-3">
+        <div class="col-6">
+          <div class="form-floating">
+            <input type="time" class="form-control input" formControlName="start_time" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Başlangıç Saati</label>
+          </div>
+          
+        </div>
+        <div class="col-6">
+          <div class="form-floating">
+            <input type="time" class="form-control input"  formControlName="end_time"  id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Bitiş Saati</label>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row d-flex justify-content-center">
+        <div class="col-6">
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control input"  formControlName="lesson_name"  id="floatingInput" placeholder="name@example.com">
+           
+            <label for="floatingInput">Ders</label>
+          </div>
+    
+          
+        </div>
+        <div class="col-6">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control input"  formControlName="subject"  id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Konu</label>
+          </div>
+    
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center">
+      
+      </div>
+      <div class="mb-3">
+      
+        <label for="description">Açıklama</label>
+        <textarea class="form-control input" name="" formControlName="info"  id="description" cols="30" rows="10"></textarea>
+      </div>
+
+    <div class="d-flex justify-content-center">
+    
+      <button class=" neubutton p-2"  style="width: 50%;" (click)="creteWorkout()">Oluştur</button>
+    </div>
+    </form>
+  </div>
+</div>
+
+
+
+<!-- <mat-vertical-stepper #stepper>
   <mat-step>
     <form >
       <ng-template matStepLabel>Fill out your name</ng-template>
@@ -33,21 +101,5 @@
       <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
-</mat-vertical-stepper>
-</div> -->
-
-<div class="container">
-  <div class="bar">
-    <svg>
-      <circle cx='50%' cy='50%' r="50%"></circle>
-    </svg>
-    <h1>TYT<br>91%</h1>
-  </div>
-
-  <div class="bar">
-    <svg>
-      <circle cx='50%' cy='50%' r="50%" [style]="get()"></circle>
-    </svg>
-    <h1>AYT<br>{{no}}</h1>
-  </div>
+</mat-vertical-stepper> -->
 </div>

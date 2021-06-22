@@ -12,7 +12,8 @@ export class FilterUniPipe implements PipeTransform {
     .filter((p:UniversityModel)=>p.universite.toLocaleLowerCase().indexOf(filterText)!==-1||
     p.sehir.toLocaleLowerCase().indexOf(filterText)!==-1||
     p.fakulte.toLocaleLowerCase().indexOf(filterText)!==-1||
-    p.universite_turu.toLocaleLowerCase().indexOf(filterText)!==-1)
+    p.universite_turu.toLocaleLowerCase().indexOf(filterText)!==-1||
+    p.bolum.toLocaleLowerCase().indexOf(filterText)!==-1)
     :value;
   }
 }

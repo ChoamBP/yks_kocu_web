@@ -1,3 +1,4 @@
+import { UserUpdateModel } from './../model/userUpdateModel';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -24,6 +25,10 @@ export class AuthService {
   register(registerModel:UserRegisterModel):Observable<boolean>{
     let newUrl=this.apiUrl+"register";
     return this.httpClient.post<boolean>(newUrl,registerModel);
+  }
+  update(updateModel:UserUpdateModel):Observable<boolean>{
+    let newUrl=this.apiUrl+"update";
+    return this.httpClient.post<boolean>(newUrl,updateModel);
   }
 
   isAuthenticated():boolean{

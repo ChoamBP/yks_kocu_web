@@ -21,10 +21,10 @@ export class UserLayoutComponent implements OnInit {
   ngOnInit(): void {
     this.user=this.localStorageService.getCurrentUser();
 
-    if(this.user.profile_picture_url===""){
-      this.user.profile_picture_url="https://bootdey.com/img/Content/avatar/avatar7.png";
+    if(this.user.profile_picture_url.trim()===""){
+      this.user.profile_picture_url="https://firebasestorage.googleapis.com/v0/b/ykskocu-a2caf.appspot.com/o/f5608f87-5a68-4eca-8624-7cdfaed23a2d?alt=media&token=a0b39b77-b820-44a5-8922-3117c7b7c01b";
     }
-    this.toastr.info("burda login yapacaksın user layout on init fonksiyonunda(şifre başka bir yerde değişmiş olabilir diye) ")
+    
   }
 
   getClass(){

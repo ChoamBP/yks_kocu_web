@@ -4,17 +4,14 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-techniques',
   templateUrl: './techniques.component.html',
-  styleUrls: ['./techniques.component.css']
+  styleUrls: ['./techniques.component.css'],
 })
 export class TechniquesComponent implements OnInit {
+  constructor(private viewportScroller: ViewportScroller) {}
 
-  constructor(private viewportScroller:ViewportScroller) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  public onClick(elementId: string): void { 
+  public onClick(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
-}
-
+  }
 }

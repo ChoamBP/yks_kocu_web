@@ -43,6 +43,8 @@ import { firebaseConfig } from 'src/environments/environment';
 import { CommonModule } from '@angular/common';
 import { UniverstiyComponent } from './pages/universtiy/universtiy.component';
 import { FilterUniPipe } from './pipes/filter-uni.pipe';
+import { MyplanComponent } from './pages/myplan/myplan.component';
+import { TimeConventerPipe } from './pipes/time-conventer.pipe';
 
 
 
@@ -65,7 +67,9 @@ import { FilterUniPipe } from './pipes/filter-uni.pipe';
     WorkingComponent,
     SettingComponent,
     UniverstiyComponent,
-    FilterUniPipe
+    FilterUniPipe,
+    MyplanComponent,
+    TimeConventerPipe
   ],
   imports: [
     BrowserModule,

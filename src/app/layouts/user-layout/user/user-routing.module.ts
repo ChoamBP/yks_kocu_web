@@ -4,6 +4,7 @@ import { SidebarComponent } from 'src/app/components/sidebar/sidebar.component';
 import { LoginGuard } from 'src/app/guards/login.guard';
 import { CalculateScoreComponent } from 'src/app/pages/calculate-score/calculate-score.component';
 import { FollowTopicComponent } from 'src/app/pages/follow-topic/follow-topic.component';
+import { MyplanComponent } from 'src/app/pages/myplan/myplan.component';
 import { SettingComponent } from 'src/app/pages/setting/setting.component';
 import { StatisticsComponent } from 'src/app/pages/statistics/statistics.component';
 import { TechniquesComponent } from 'src/app/pages/techniques/techniques.component';
@@ -50,6 +51,10 @@ export const routes: Routes = [
   {
     path:'settings',
     component:SettingComponent
+  },
+  {
+    path:"myplan",
+    component:MyplanComponent
   }
 ];
 

@@ -28,36 +28,57 @@
           <div class="card neumorphism mb-3 p-2" style="border-radius: 6px;">
             <div class="card-body">
               <div class="row">
-                <div class="d-flex justify-content-start ">
-                    <h6 class="mb-0  px-5" style="font-size: 16px;"><b>{{user.name}}</b></h6>
+                <div class="d-flex col-4 justify-content-start ">
+                    <h6 class="mb-0  px-5" style="font-size: 16px;">{{user.name}}</h6>
                   </div>
                   
-            
+                  <div class="d-flex col-8 justify-content-start">
+                    <h6 class="mb-0  px-5" style="font-size: 16px;"><b>Bölüm : </b>{{targetUniversity.section}}</h6>
+                  </div>
+         
               </div>
               <hr />
               <div class="row">
-                <div class="d-flex justify-content-start">
+                <div class="d-flex col-4 justify-content-start">
                   <h6 class="mb-0  px-5" style="font-size: 16px;">{{user.username}}</h6>
                 </div>
+
+                <div class="d-flex col-8 justify-content-start">
+                  <h6 class="mb-0  px-5" style="font-size: 16px;"><b>Hedef Bölüm : </b>{{targetUniversity.target_department}}</h6>
+                </div>
+       
        
               </div>
   
               <hr />
               <div class="row">
-                <div class="d-flex justify-content-start">
+                <div class="d-flex col-4 justify-content-start">
                   <h6 class="mb-0  px-5" style="font-size: 16px;">{{user.email}}</h6>
                 </div>
-                <div class="col-sm-9 text-secondary">
-            
+                <div class="d-flex col-8 justify-content-start">
+                  <h6 class="mb-0  px-5" style="font-size: 16px;"><b>Hedef Üniversite : </b>{{targetUniversity.target_university}}</h6>
                 </div>
+       
+               
               </div>
               <hr />
              
               <div class="row">
-                <div class="d-flex justify-content-start">
-                  <h6 class="mb-0  px-5" style="font-size: 16px;">{{user.class}} . Sınıf</h6>
+                <div class="d-flex col-4 justify-content-start">
+                 
+                    <div *ngIf="user.class==13">
+                      <h6 class="mb-0  px-5" style="font-size: 16px;"> Mezun</h6>
+                    </div>
+                    <div *ngIf="user.class!=13">
+                      <h6 class="mb-0  px-5" style="font-size: 16px;">  {{user.class}} . Sınıf</h6>
+                    </div>
+                    
                 </div>
         
+                <div class="d-flex col-8 justify-content-start">
+                  <h6 class="mb-0  px-5" style="font-size: 16px;"><b>Hedef Puan : </b>{{targetUniversity.target_point}}</h6>
+                </div>
+       
               </div>
 
               

@@ -44,7 +44,7 @@ export class StatisticsComponent implements OnInit {
       totalComplete += this.calculatePercent(subject.subject_state)/100*(subject.subject_state.length);
       totalSubject+=(subject.subject_state.length);
     });
-
+    
    if(focus){
     this.tytTotal=Number((totalComplete/totalSubject*100).toFixed(2));
     
